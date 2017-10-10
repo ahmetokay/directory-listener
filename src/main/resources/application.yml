@@ -6,8 +6,8 @@ local:
   threadSize: 2
 
 remote:
-  ip: 213.136.91.105
-  username: ftp_test
-  password: 123456
-  port: 8080
+  ip:
+  username:
+  password:
+  port:
   folder: /test
