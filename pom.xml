@@ -21,12 +21,6 @@
             <version>1.5.7.RELEASE</version>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>commons-net</groupId>-->
-            <!--<artifactId>commons-net</artifactId>-->
-            <!--<version>3.6</version>-->
-        <!--</dependency>-->
-
         <dependency>
             <groupId>com.jcraft</groupId>
             <artifactId>jsch</artifactId>

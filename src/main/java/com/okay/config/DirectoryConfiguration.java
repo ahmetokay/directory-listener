@@ -12,21 +12,11 @@ public class DirectoryConfiguration {
 
     private String directory;
 
-    private int threadSize;
-
     public String getDirectory() {
         return directory;
     }
 
     public void setDirectory(String directory) {
         this.directory = directory;
-    }
-
-    public int getThreadSize() {
-        return threadSize;
-    }
-
-    public void setThreadSize(int threadSize) {
-        this.threadSize = threadSize;
     }
 }

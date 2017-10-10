@@ -10,8 +10,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.nio.file.*;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  * Created by ahmet on 6.10.2017.
@@ -20,8 +18,6 @@ import java.util.concurrent.Executors;
 public class DirectoryManagerImpl implements DirectoryManager {
 
     private Logger logger = LoggerFactory.getLogger(DirectoryManagerImpl.class);
-
-    private ExecutorService executorService = Executors.newFixedThreadPool(10);
 
     @Autowired
     private DirectoryConfiguration configuration;
@@ -40,7 +36,7 @@ public class DirectoryManagerImpl implements DirectoryManager {
                         Path name = (Path) event.context();
                         Path absoluteFilePath = Paths.get(listenPath.toString(), name.toString());
 
-                        executorService.submit(() -> fileManager.addFile(absoluteFilePath.toFile()));
+                        fileManager.addFile(absoluteFilePath.toFile());
                     }
                 }
             } while (key.reset());
